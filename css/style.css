@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: hsl(211, 10%, 45%);
+  font-family: "rubik", sans-serif;
+  background-color: hsl(223, 19%, 93%);
+  font-size: 1.6rem;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem auto;
+  width: 70rem;
+}
+.comment-section .comments {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.101);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  gap: 2rem;
+}
+.comment-section .comments .text-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.comment-section .comments .text-box .text-box-head {
+  display: flex;
+  justify-content: space-between;
+}
+.comment-section .comments .text-box .text-box-head div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.comment-section .comments .text-box .text-box-head div img {
+  width: 4rem;
+  height: auto;
+}
+.comment-section .comments .text-box .text-box-head div .user-name {
+  color: black;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.comment-section .comments .text-box .text-box-head div .icon-img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: -0.5rem;
+}
+.comment-section .comments .text-box .reply {
+  color: hsl(238, 40%, 52%);
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.comment-section .comments .text-box .reply:hover {
+  opacity: 0.5;
+}
+.comment-section .comments .plus-minus {
+  background-color: hsl(223, 19%, 93%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+.comment-section .comments .plus-minus .minus {
+  width: 1.5rem;
+  height: 0.3rem;
+  cursor: pointer;
+}
+.comment-section .comments .plus-minus .hover:hover {
+  fill: hsl(238, 40%, 52%);
+}
+.comment-section .comments .plus-minus .plus {
+  width: 1.2rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.comment-section .comments .plus-minus .number {
+  color: hsl(238, 40%, 52%);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.comment-section .sub-comments-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+.comment-section .sub-comments-container hr {
+  height: auto;
+  border-color: hsl(228, 33%, 97%);
+  border-radius: 100%;
+}
+.comment-section .sub-comments-container .sub-comments {
+  width: 90%;
+}
+.comment-section .add-comment img {
+  width: auto;
+  height: 4rem;
+}
+.comment-section .add-comment textarea {
+  border: 0.1rem solid hsl(223, 19%, 93%);
+  padding: 1rem 2rem;
+  border-radius: 1.2rem;
+  flex: 8;
+  height: 9rem;
+}
+.comment-section .add-comment textarea:focus {
+  outline: 0.2rem solid hsl(238, 40%, 52%);
+  color: hsl(212, 24%, 26%);
+}
+.comment-section .add-comment button {
+  background-color: hsl(238, 40%, 52%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  height: 5rem;
+  flex: 1;
+}
+.comment-section .add-comment button:hover {
+  background-color: hsl(239, 57%, 85%);
+}

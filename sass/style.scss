@@ -1,0 +1,157 @@
+$Dark-blue: hsl(212, 24%, 26%);
+$SoftRed: hsl(358, 79%, 66%);
+$Moderate-blue: hsl(238, 40%, 52%);
+$Light-grayish-blue: hsl(239, 57%, 85%);
+$Pale-red: hsl(357, 100%, 86%);
+$Grayish-Blue: hsl(211, 10%, 45%);
+$Light-gray: hsl(223, 19%, 93%);
+$Very-light-gray: hsl(228, 33%, 97%);
+$White: hsl(0, 0%, 100%);
+@mixin btn($bgcolor, $color) {
+  background-color: $bgcolor;
+  color: $color;
+  border-radius: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+@mixin spans($color) {
+  color: $color;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  color: $Grayish-Blue;
+  font-family: "rubik", sans-serif;
+  background-color: $Light-gray;
+  font-size: 1.6rem;
+}
+.comment-section {
+  .comments {
+    .text-box {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      .text-box-head {
+        display: flex;
+        justify-content: space-between;
+        div {
+          img {
+            width: 4rem;
+            height: auto;
+          }
+          .user-name {
+            color: black;
+            font-weight: 400;
+            font-size: 1.8rem;
+          }
+          .icon-img {
+            width: 1rem;
+            height: 1rem;
+            margin-right: -0.5rem;
+          }
+          align-items: center;
+          display: flex;
+
+          justify-content: center;
+          gap: 1rem;
+        }
+      }
+      .reply {
+        @include spans($Moderate-blue);
+      }
+      .reply:hover {
+        opacity: 0.5;
+      }
+    }
+    .plus-minus {
+      background-color: $Light-gray;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem;
+      border-radius: 1rem;
+      .minus {
+        width: 1.5rem;
+        height: 0.3rem;
+        cursor: pointer;
+      }
+      .hover:hover {
+        fill: $Moderate-blue;
+      }
+      .plus {
+        width: 1.2rem;
+        height: 1rem;
+        cursor: pointer;
+      }
+      .number {
+        color: $Moderate-blue;
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+    }
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.101);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    background-color: $White;
+    display: flex;
+    gap: 2rem;
+  }
+  .sub-comments-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+    hr {
+      height: auto;
+      border-color: $Very-light-gray;
+      border-radius: 100%;
+    }
+    .sub-comments {
+      width: 90%;
+    }
+  }
+  .add-comment {
+    img {
+      width: auto;
+      height: 4rem;
+    }
+    textarea {
+      border: 0.1rem solid $Light-gray;
+      padding: 1rem 2rem;
+      border-radius: 1.2rem;
+
+      flex: 8;
+      height: 9rem;
+    }
+    textarea:focus {
+      outline: 0.2rem solid $Moderate-blue;
+      color: $Dark-blue;
+    }
+    button {
+      @include btn($Moderate-blue, $White);
+      height: 5rem;
+      flex: 1;
+    }
+    button:hover {
+      background-color: $Light-grayish-blue;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem auto;
+  width: 70rem;
+}
